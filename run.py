@@ -1,7 +1,5 @@
 import file_sorter.sorter as fs
 
-OBJECTIVE_PATH = 'D:\Documentos\Descargas'
-
 def run():
   srtr = fs.FileSorter(OBJECTIVE_PATH)
   rules = [
@@ -17,4 +15,5 @@ def run():
   srtr.sort(rules)
 
 if __name__ == '__main__':
+  OBJECTIVE_PATH = 'D:\Documentos\Descargas'
   run()

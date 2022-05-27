@@ -1,6 +1,7 @@
 +-+-- file_sorter
   +-- __init__.py
+  +-- sort.py : file containing the main class
   +-- constants.py
   +-- helpers.py
-+- constants.py
-+- run.py
+  +-- rulesformat.txt : infor about rule structure
++- run.py : execute from here

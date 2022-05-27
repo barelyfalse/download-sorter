@@ -1,7 +1,18 @@
 rules need:
   - directory name (string)
-  - file types (list of strings)
+  - file types (array of strings)
   - max size (bytes) (integer) (not required)
   - min size (bytes) (integer) (not required)
-  - subrule (rule)
+  - subrules (array of rule)
 
+example:
+rules = [
+  fs.SortRule('image', ['.jpeg', '.png', '.jpg', '.gif', '.svg']),      #sort rule for image types
+  fs.SortRule('video', ['.mp4', '.mov', '.webm', '.3gpp'], _subrules=[  #sort rule for video types
+    fs.SortRule('videoMemes', _max_file_size=8000000)                   #with a sub rule for small files (final dir "\video\videoMemes")
+  ]),
+  fs.SortRule('audio', ['.wav', '.mp3', '.ogg']),
+  fs.SortRule('documents', ['.doc', '.docx', '.pptx', '.xlxs', '.pdf']),
+  fs.SortRule('executables', ['.bin', '.exe', '.msi']),
+  fs.SortRule('compressed', ['.zip', '.rar', '.tar', '.7z', '.iso', '.img'])
+]

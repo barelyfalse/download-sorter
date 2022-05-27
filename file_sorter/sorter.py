@@ -92,5 +92,6 @@ class FileSorter:
         for rule in _rules:
           match = self.entry_matches_rule(entry, rule)
           if match[0]:
-            print(f'{entry.name} matches, path: {match[1]}')
+            shutil.move(entry.path, self.objective_path + match[1] + '\\' )
+            print(f'{entry.name} moved to: {self.objective_path+match[1]}')
             break

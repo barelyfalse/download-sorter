@@ -1,0 +1,7 @@
+rules need:
+  - directory name (string)
+  - file types (list of strings)
+  - max size (bytes) (integer) (not required)
+  - min size (bytes) (integer) (not required)
+  - subrule (rule)
+
